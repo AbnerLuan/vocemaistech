@@ -1,5 +1,6 @@
 package com.luan.vocemaistech.services;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +40,10 @@ public class DBService {
 
 		User u4 = new User(null, "rosberval", "123456789-99", "rosberval@mail.com", encoder.encode("123"));
 		
-		PostBlog p7 = new PostBlog(null, "teste title", "teste text", CategoryPost.PROGRAMACAO, "subcategoria", "abnerluan", 
-				u2, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
+		PostBlog p7 = new PostBlog(null, "teste title", LocalDate.now(), "teste text", CategoryPost.PROGRAMACAO, "subcategoria", "abnerluan", u1,
+				 "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
-		PostBlog p1 = new PostBlog(null, "Titulo do Post",
+		PostBlog p1 = new PostBlog(null, "Titulo do Post", LocalDate.now(),
 				"1Lorem Ipsum é simplesmente uma simulação \"\r\n"
 						+ "				+ \"de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um \"\r\n"
 						+ "				+ \"impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de \"\r\n"
@@ -53,7 +54,7 @@ public class DBService {
 				CategoryPost.SOCIALMEDIA, "java", u1.getName(), u1, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
 
-		PostBlog p2 = new PostBlog(null, "2Titulo do Post2",
+		PostBlog p2 = new PostBlog(null, "2Titulo do Post2", LocalDate.now(),
 				"2Lorem Ipsum é simplesmente uma simulação "
 						+ "de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um "
 						+ "impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de "
@@ -61,9 +62,9 @@ public class DBService {
 						+ "permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques "
 						+ "contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de "
 						+ "editoração eletrônica como Aldus PageMaker.",
-				CategoryPost.SOCIALMEDIA, "ANGULAR", u1.getName(), u1, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
+				CategoryPost.SOCIALMEDIA, "ANGULAR", u1.getName(), u1,  "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
-		PostBlog p3 = new PostBlog(null, "3Titulo do Post3",
+		PostBlog p3 = new PostBlog(null, "3Titulo do Post3", LocalDate.now(),
 						"3Lorem Ipsum é simplesmente uma simulação "
 						+ "de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um "
 						+ "impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de "
@@ -71,9 +72,9 @@ public class DBService {
 						+ "permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques "
 						+ "contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de "
 						+ "editoração eletrônica como Aldus PageMaker.",
-				CategoryPost.SOCIALMEDIA, "java", u4.getName(),u4, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
+				CategoryPost.SOCIALMEDIA, "java", u4.getName(), u4, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
-		PostBlog p4 = new PostBlog(null, "4Titulo do Post2",
+		PostBlog p4 = new PostBlog(null, "4Titulo do Post2", LocalDate.now(),
 				"4Lorem Ipsum é simplesmente uma simulação "
 						+ "de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um "
 						+ "impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de "
@@ -83,7 +84,7 @@ public class DBService {
 						+ "editoração eletrônica como Aldus PageMaker.",
 				CategoryPost.SOCIALMEDIA, "ANGULAR", u3.getName(), u3, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
-		PostBlog p5 = new PostBlog(null, "5Titulo do Post",
+		PostBlog p5 = new PostBlog(null, "5Titulo do Post", LocalDate.now(),
 				"5Lorem Ipsum é simplesmente uma simulação "
 						+ "de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um "
 						+ "impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de "
@@ -91,9 +92,9 @@ public class DBService {
 						+ "permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques "
 						+ "contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de "
 						+ "editoração eletrônica como Aldus PageMaker.",
-				CategoryPost.SOCIALMEDIA, "java", u2.getName(), u2, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
+				CategoryPost.SOCIALMEDIA, "java", u2.getName(), u2,  "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
-		PostBlog p6 = new PostBlog(null, "6Titulo do Post",
+		PostBlog p6 = new PostBlog(null, "6Titulo do Post", LocalDate.now(),
 				"6Lorem Ipsum é simplesmente uma simulação "
 						+ "de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um "
 						+ "impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de "
@@ -101,7 +102,7 @@ public class DBService {
 						+ "permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques "
 						+ "contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de "
 						+ "editoração eletrônica como Aldus PageMaker.",
-				CategoryPost.SOCIALMEDIA, "ANGULAR", u1.getName(), u1, "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
+				CategoryPost.SOCIALMEDIA, "ANGULAR", u1.getName(), u1,  "https://s3.amazonaws.com/www.vocemaistech.com.br/assets/img/new-post-banner.jpg");
 
 		studentRepository.saveAll(Arrays.asList(u1, u2, u3, u4, u5));
 		postBlogRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5, p6, p7));

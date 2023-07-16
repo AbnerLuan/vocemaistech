@@ -38,6 +38,5 @@ public class StorageController {
 	public ResponseEntity<String> deleteFile(@PathVariable String fileName) {
 		storageService.deleteFile(fileName);
 		return ResponseEntity.noContent().build();
-		//return ResponseEntity.ok().body(storageService.deleteFile(fileName));
 	}
 }

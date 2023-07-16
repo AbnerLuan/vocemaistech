@@ -39,9 +39,7 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 		http.cors().and().csrf().disable();
-		
 		http.headers().frameOptions().disable();
-
 		http.addFilter(new JWTAuthenticationFilter(
 				authenticationManager(http.getSharedObject(AuthenticationConfiguration.class)), jwtUtil));
 		http.addFilter(new JWTAuthorizationFilter(

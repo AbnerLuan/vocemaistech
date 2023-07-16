@@ -1,15 +1,15 @@
 package com.luan.vocemaistech.model;
 
-import java.util.stream.Collectors;
-
 import com.luan.vocemaistech.model.dtos.AdminDTO;
 import com.luan.vocemaistech.model.enums.Profile;
-
 import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Admin extends Person {
-
 	private static final long serialVersionUID = 1L;
 
 	public Admin() {
@@ -24,13 +24,13 @@ public class Admin extends Person {
 
 	public Admin(AdminDTO obj) {
 		super();
-		this.id = obj.getId();
-		this.name = obj.getName();
-		this.cpf = obj.getCpf();
-		this.email = obj.getEmail();
-		this.password = obj.getPassword();
-		this.memberSince = obj.getMemberSince();
-		this.profile = obj.getProfile().stream().map(x -> x.getCode()).collect(Collectors.toSet());
+		this.id = obj.id();
+		this.name = obj.name();
+		this.cpf = obj.cpf();
+		this.email = obj.email();
+		this.password = obj.password();
+		this.memberSince = obj.memberSince();
+		this.profile = obj.profile();
 
 	}
 
